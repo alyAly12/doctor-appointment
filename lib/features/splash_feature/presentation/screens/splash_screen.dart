@@ -1,4 +1,7 @@
+
+import 'package:doctor_appointment/features/splash_feature/presentation/widgets/splash_screen_body.dart';
 import 'package:flutter/material.dart';
+
 
 
 class SplashScreen extends StatelessWidget {
@@ -6,10 +9,11 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Splash Screen'),
-      ),
+    return  const Scaffold(
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: SplashScreenBody(),
+      )
     );
   }
 }
