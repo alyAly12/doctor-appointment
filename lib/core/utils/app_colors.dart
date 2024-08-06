@@ -20,10 +20,11 @@ class AppColors{
   static const Color issueBorderColor = Color(0xffCAD8E2);
   static const Color blackCoat = Color(0xff384853);
   static const Color cancelTitleColor = Color(0xffDFE1E3);
-  static const Color stopColor = Color(0xffCB647D);
+  static const Color stopColor = Color(0xffCB139D);
   static const Color confirmColor = Color(0xff1FC592);
   static const Color customKeyboardColor = Color(0xffF1F0F5);
   static const Color connectionCancelColor = Color(0xffFEEDB6);
+  static const Color deepRed = Color(0xffc8002f);
 
 
 

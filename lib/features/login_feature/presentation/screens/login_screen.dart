@@ -1,3 +1,4 @@
+import 'package:doctor_appointment/features/login_feature/presentation/widgets/login_screen_body.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -5,9 +6,13 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Login Screen'),
+    return GestureDetector(
+      onTap: (){
+        FocusScope.of(context).unfocus();
+      },
+      child: const Scaffold(
+        backgroundColor: Colors.white,
+        body:LoginScreenBody()
       ),
     );
   }
