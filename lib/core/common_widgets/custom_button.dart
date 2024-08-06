@@ -12,7 +12,7 @@ class CustomButton extends StatelessWidget {
     this.buttonHeight,
     this.textSize = 16,
     this.textColor = Colors.white,
-    this.textWeight,
+    this.textWeight, this.left, this.right, this.radius,
   });
 
   final void Function() onPressed;
@@ -23,12 +23,15 @@ class CustomButton extends StatelessWidget {
   final double? textSize;
   final Color? textColor;
   final FontWeight? textWeight;
+  final double?left;
+  final double?right;
+  final double?radius;
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.only(left: 25, right: 25),
+      padding:  EdgeInsets.only(left:left?? 25, right:right?? 25),
       child: SizedBox(
         width: size.width,
         height: buttonHeight,
@@ -36,7 +39,7 @@ class CustomButton extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               backgroundColor: color??AppColors.mainColor ,
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)),
+                  borderRadius: BorderRadius.circular(radius??20)),
             ),
             onPressed: onPressed,
             child: Row(
