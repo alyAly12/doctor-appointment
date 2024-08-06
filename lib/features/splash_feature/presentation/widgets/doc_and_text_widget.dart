@@ -26,7 +26,7 @@ class DocAndTextWidget extends StatelessWidget {
           ),
             child: Image.asset(AssetsManager.doctor,fit: BoxFit.cover,)),
         Positioned(
-          bottom: 50,
+          bottom: 50.h,
           left: 0,
           right: 0,
           child: Center(
