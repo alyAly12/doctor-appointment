@@ -12,7 +12,7 @@ class SplashScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 10),
+      padding:  EdgeInsets.only(top: 30.h),
       child: SingleChildScrollView(
         reverse: true,
         child: Column(
@@ -20,11 +20,11 @@ class SplashScreenBody extends StatelessWidget {
           children: [
             const LogoWidget(),
             SizedBox(
-              height: 10.h,
+              height: 20.h,
             ),
             const DocAndTextWidget(),
             SizedBox(
-              height: 20.h,
+              height: 45.h,
             ),
             CustomButton(onPressed: (){
               context.pushReplacementNamed(Routes.loginScreen);
