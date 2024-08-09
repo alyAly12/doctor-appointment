@@ -25,6 +25,7 @@ class CustomTextWidget extends StatelessWidget {
       maxLines: maxLines,
       style: TextStyle(
           decoration: textDecoration,
+          decorationThickness: 2,
           decorationColor: AppColors.mainColor,
           color: color,
           fontSize: fontSize,
