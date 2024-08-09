@@ -4,13 +4,14 @@ import 'package:doctor_appointment/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatelessWidget {
-  const CustomTextFormField({super.key, required this.controller, required this.focusNode, required this.hintText, this.obsecureText, this.suffixIcon, this.textInputAction});
+  const CustomTextFormField({super.key, required this.controller, required this.focusNode, required this.hintText, this.obsecureText, this.suffixIcon, this.textInputAction, required this.validator});
   final TextEditingController controller;
   final FocusNode focusNode;
   final String hintText;
   final bool? obsecureText;
   final Widget? suffixIcon;
   final TextInputAction? textInputAction;
+  final Function(String?) validator;
   @override
   Widget build(BuildContext context) {
     return  TextFormField(
@@ -39,7 +40,7 @@ class CustomTextFormField extends StatelessWidget {
         ),
         errorBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(16)),
-            borderSide: BorderSide(color: AppColors.stopColor)),
+            borderSide: BorderSide(color: AppColors.deepRed)),
         errorStyle: const TextStyle(fontSize: 14, color: AppColors.deepRed),
         focusedErrorBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(16)),
@@ -53,7 +54,9 @@ class CustomTextFormField extends StatelessWidget {
           color: AppColors.greyColor,
           fontSize: 15
       ),
-      // validator: validator,
+      validator: (value){
+        return validator(value);
+      },
       // onFieldSubmitted: onFieldSubmitted,
       // onSaved: onSaved,
     );
