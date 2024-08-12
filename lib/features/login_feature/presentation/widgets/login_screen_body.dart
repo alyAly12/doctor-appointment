@@ -7,7 +7,6 @@ import 'package:doctor_appointment/features/login_feature/presentation/widgets/t
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../data/models/login_request_body.dart';
 import '../../logic/login_cubit.dart';
 import 'email_and_password_widget.dart';
 import 'login_bloc_listener.dart';
