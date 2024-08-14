@@ -8,7 +8,7 @@
         "type": "dart",
         "program": "lib/main_development.dart",
         "args": ["--flavor", "Development", "--target", "lib/main_development.dart" ]
-      }
+      },
       {
         "name": "doctor_appointment Production",
         "request": "launch",
@@ -16,5 +16,5 @@
         "program": "lib/main_production.dart",
         "args": ["--flavor", "Production", "--target", "lib/main_production.dart" ]
       }
-    ],
+    ]
   }
