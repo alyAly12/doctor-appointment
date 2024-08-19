@@ -57,7 +57,10 @@ class DoctorBlueBanner extends StatelessWidget {
           ),
           Positioned(
               top: 0,
+ features/home
               right: 16,
+              right: 17,
+
               child: Image.asset(AssetsManager.bannerDoctor, height: 200.h)),
         ],
       ),
