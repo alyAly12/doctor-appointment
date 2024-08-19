@@ -1,3 +1,4 @@
+import 'package:doctor_appointment/features/home_feature/presentation/widgets/home_screen_body.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,9 +7,8 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(
-        child: Text('Home Screen'),
-      ),
+      backgroundColor: Colors.white,
+      body: HomeScreenBody()
     );
   }
 }
