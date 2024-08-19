@@ -8,4 +8,11 @@ class AppStrings{
   static const String signup = 'Sign up';
   static const String bookAndSchedule = 'Book and\nSchedule with\nnearest doctor';
   static const String findDoc = 'Find Doctor';
+  static const String docSpecialist = 'Doctor Speciality';
+  static const String seeAll = 'View All';
+  static const String general = 'General';
+  static const String pediatric = 'Pediatric';
+  static const String brain = 'Brain';
+  static const String kidney = 'Kidney';
+  static const String recommendationDoctors = 'Recommended Dr.';
 }
