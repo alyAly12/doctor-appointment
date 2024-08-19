@@ -1,12 +1,13 @@
 
 import 'package:doctor_appointment/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextWidget extends StatelessWidget {
   const CustomTextWidget(
       {super.key,
         required this.title,
-        this.fontSize = 20,
+        this.fontSize = 22,
         this.maxLines,
         this.color,
         this.fontWeight, this.textAlign, this.textDecoration});
@@ -28,7 +29,7 @@ class CustomTextWidget extends StatelessWidget {
           decorationThickness: 2,
           decorationColor: AppColors.mainColor,
           color: color,
-          fontSize: fontSize,
+          fontSize: fontSize.sp,
           fontFamily: 'Roboto',
           fontWeight: fontWeight,
           overflow: TextOverflow.ellipsis),

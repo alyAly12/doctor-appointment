@@ -1,5 +1,7 @@
+import 'package:doctor_appointment/features/home_feature/presentation/widgets/doctor_blue_banner.dart';
 import 'package:doctor_appointment/features/home_feature/presentation/widgets/home_top_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeScreenBody extends StatelessWidget {
   const HomeScreenBody({super.key});
@@ -10,10 +12,12 @@ class HomeScreenBody extends StatelessWidget {
       child: Container(
         width: double.infinity,
         margin: const EdgeInsets.fromLTRB(20, 16, 20, 28),
-        child: const Column(
+        child:  Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            HomeTopBar()
+            const HomeTopBar(),
+            SizedBox(height: 5.h,),
+            const DoctorBlueBanner()
           ],
         ),
       ),
