@@ -45,10 +45,10 @@ class DoctorBlueBanner extends StatelessWidget {
                         ),
                       ),
                       onPressed: () {},
-                      child: const CustomTextWidget(
+                      child:  CustomTextWidget(
                         title: AppStrings.findDoc,
                         color: AppColors.mainColor,
-                        fontSize: 14,
+                        fontSize: 12.sp,
                         fontWeight: FontWeight.bold,
                       )),
                 )
@@ -57,10 +57,7 @@ class DoctorBlueBanner extends StatelessWidget {
           ),
           Positioned(
               top: 0,
- features/home
               right: 16,
-              right: 17,
-
               child: Image.asset(AssetsManager.bannerDoctor, height: 200.h)),
         ],
       ),

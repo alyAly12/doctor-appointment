@@ -25,8 +25,8 @@ platform :android do
         firebase_cli_token:"1//096Ypqci2PEypCgYIARAAGAkSNwF-L9IrBpI8tGNI5TwIN8zaJuExhDal0vvjpviJ9TjhJ7may1j20cq6oUpFHQFBUt_Drsk0Sik",
         android_artifact_type:"APK",
         android_artifact_path:"D:/projects/doctor-appointment/build/app/outputs/flutter-apk/app-production-release.apk",
-        testers: "alys1949@hotmail.com",
-        release_notes:"First fastlane distribution"
+        testers: "alys1949@hotmail.com","hassan.sherif.200@gmail.com",
+        release_notes:"testing the production release with eng hassan mostafa"
       )
   end
 end
