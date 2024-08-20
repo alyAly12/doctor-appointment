@@ -25,6 +25,7 @@ class AppColors{
   static const Color customKeyboardColor = Color(0xffF1F0F5);
   static const Color connectionCancelColor = Color(0xffFEEDB6);
   static const Color deepRed = Color(0xffc8002f);
+  static const Color lightBlue = Color(0xffF4F8FF);
 
 
 
