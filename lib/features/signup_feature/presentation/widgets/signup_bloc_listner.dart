@@ -1,3 +1,4 @@
+import 'package:doctor_appointment/core/common_widgets/loading_widget.dart';
 import 'package:doctor_appointment/core/helper/extension.dart';
 import 'package:doctor_appointment/features/signup_feature/logic/signup_cubit.dart';
 import 'package:doctor_appointment/features/signup_feature/logic/signup_state.dart';
@@ -20,11 +21,7 @@ class SignupBlocListener extends StatelessWidget {
           showDialog(
               context: context,
               builder: (context) {
-                return const Center(
-                  child: CircularProgressIndicator(
-                    color: AppColors.mainColor,
-                  ),
-                );
+                return const LoadingWidget();
               });
         }, success: (signupResponse) {
           context.pop();

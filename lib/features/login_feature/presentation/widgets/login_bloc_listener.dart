@@ -1,3 +1,4 @@
+import 'package:doctor_appointment/core/common_widgets/loading_widget.dart';
 import 'package:doctor_appointment/core/helper/extension.dart';
 import 'package:doctor_appointment/core/routing/routes.dart';
 import 'package:doctor_appointment/core/utils/app_colors.dart';
@@ -19,11 +20,7 @@ class LoginBlocListener extends StatelessWidget {
           showDialog(
               context: context,
               builder: (context) {
-                return const Center(
-                  child: CircularProgressIndicator(
-                    color: AppColors.mainColor,
-                  ),
-                );
+                return const LoadingWidget();
               });
         }, success: (loginResponse) {
           context.pop();
