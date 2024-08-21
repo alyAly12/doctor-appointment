@@ -1,7 +1,7 @@
 import 'package:doctor_appointment/core/routing/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'core/helper/shared_pref_keys.dart';
 import 'core/routing/routes.dart';
 import 'core/utils/app_colors.dart';
 
@@ -16,7 +16,7 @@ final AppRouter appRouter;
       splitScreenMode: true,
       child:  MaterialApp(
           debugShowCheckedModeBanner: false,
-          initialRoute: Routes.splashScreen,
+          initialRoute:isLoggedInUser ? Routes.homeScreen : Routes.splashScreen,
           title: 'Flutter Demo',
           theme: ThemeData(
             primaryColor: AppColors.mainColor,

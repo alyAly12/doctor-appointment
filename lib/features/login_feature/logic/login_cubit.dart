@@ -1,3 +1,6 @@
+import 'package:doctor_appointment/core/helper/shared_pref_keys.dart';
+import 'package:doctor_appointment/core/helper/shred_prefs.dart';
+import 'package:doctor_appointment/core/networking/dio_factory.dart';
 import 'package:doctor_appointment/features/login_feature/data/models/login_request_body.dart';
 import 'package:doctor_appointment/features/login_feature/data/models/login_response_body.dart';
 import 'package:flutter/cupertino.dart';
@@ -22,12 +25,18 @@ class LoginCubit extends Cubit<LoginState> {
         password: passwordController.text
     ));
     response.when(
-        success: (LoginResponseBody loginResponseBody){
+        success: (LoginResponseBody loginResponseBody)async{
+          await saveUserToken(loginResponseBody.userData?.token??'');
           emit(LoginState.success(loginResponseBody));
         },
         failure: (error){
           emit(LoginState.error(error: error.apiErrorModel.message ??''));
         }
     );
+  }
+
+  Future<void> saveUserToken(String token)async{
+    await SharedPrefsHelper.setSecureString(SharedPrefKeys.userToken, token);
+    DioFactory.refreshHeaderAfterLogin(token);
   }
 }
