@@ -1,6 +1,6 @@
-import 'package:doctor_appointment/features/home_feature/presentation/widgets/recommend_doc_listview_item.dart';
+import 'package:doctor_appointment/features/home_feature/presentation/widgets/doctors/recommend_doc_listview_item.dart';
 import 'package:flutter/material.dart';
-import '../../data/models/specialization_response_model.dart';
+import '../../../data/models/specialization_response_model.dart';
 
 class RecommendedDocListview extends StatelessWidget {
   const RecommendedDocListview({super.key, this.doctorsList});

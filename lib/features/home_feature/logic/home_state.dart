@@ -6,8 +6,12 @@ part 'home_state.freezed.dart';
 @freezed
 class HomeState with _$HomeState {
   const factory HomeState.initial() = _Initial;
-  // specialization state
+  /// specialization state
   const factory HomeState.specializationLoading() = SpecilazationLoading;
-  const factory HomeState.specializationLoaded(SpecializationResponseModel data) = SpecializationLoaded;
+  const factory HomeState.specializationLoaded(List<SpecializationData?>? specializationDataList) = SpecializationLoaded;
   const factory HomeState.error(ErrorHandler error) = SpecializationError;
+
+  /// doctors
+  const factory HomeState.doctorsLoaded(List<Doctors?>? doctorsList) = DoctorsLoaded;
+  const factory HomeState.doctorsError(ErrorHandler error) = DoctorsError;
 }
