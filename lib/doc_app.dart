@@ -16,7 +16,7 @@ final AppRouter appRouter;
       splitScreenMode: true,
       child:  MaterialApp(
           debugShowCheckedModeBanner: false,
-          initialRoute:isLoggedInUser ? Routes.homeScreen : Routes.splashScreen,
+          initialRoute:isLoggedInUser ? Routes.rootScreen : Routes.splashScreen,
           title: 'Flutter Demo',
           theme: ThemeData(
             primaryColor: AppColors.mainColor,

@@ -2,7 +2,6 @@
 
 import 'package:doctor_appointment/core/helper/extension.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../core/networking/api_error_handler.dart';
 import '../data/models/specialization_response_model.dart';
 import '../data/repos/home_repo.dart';
 import 'home_state.dart';
@@ -21,8 +20,8 @@ List<SpecializationData?>? specializationList = [];
           getDoctorList(specializationId: specializationList?.first?.id);
           emit(HomeState.specializationLoaded(specializationList));
         },
-        failure: (failure){
-          emit(HomeState.error(failure));
+        failure: (apiErrorModel){
+          emit(HomeState.error(apiErrorModel));
         }
     );
   }
@@ -32,7 +31,7 @@ List<SpecializationData?>? specializationList = [];
     if(!doctorsList.isNullOrEmpty()){
       emit(HomeState.doctorsLoaded(doctorsList));
     }else{
-      emit(HomeState.doctorsError(ErrorHandler.handle('No doctors found')));
+      emit(const HomeState.doctorsError());
     }
 
   }
