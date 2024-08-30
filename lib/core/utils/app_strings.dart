@@ -15,4 +15,11 @@ class AppStrings{
   static const String brain = 'Brain';
   static const String kidney = 'Kidney';
   static const String recommendationDoctors = 'Recommended Dr.';
+  static const String profile = 'Profile';
+  static const String logout = 'Logout';
+  static const String myAppointments = 'My Appointments';
+  static const String medicalRecords = 'Medical Records';
+  static const String personalInfo = 'Personal Information';
+  static const String testAndDiagnosis = 'Test & Diagnosis';
+  static const String payment = 'Payment';
 }
