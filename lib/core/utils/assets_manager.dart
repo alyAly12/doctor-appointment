@@ -11,5 +11,9 @@ class AssetsManager{
   static String pediatric = 'assets/images/Iamge.svg';
   static String kidney = 'assets/images/Kidneys.svg';
   static String searchImage = 'assets/images/search-normal.svg';
+  static String settingsImage = 'assets/images/setting-image.svg';
+  static String personInfo = 'assets/images/personal.png';
+  static String myTests = 'assets/images/my-test.png';
+  static String payments = 'assets/images/pay.png';
 
 }
