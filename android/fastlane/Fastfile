@@ -26,7 +26,7 @@ platform :android do
         android_artifact_type:"APK",
         android_artifact_path:"D:/projects/doctor-appointment/build/app/outputs/flutter-apk/app-production-release.apk",
         testers: "alys1949@hotmail.com""hassan.sherif.200@gmail.com",
-        release_notes:"adding home screen you should signup first with any email like a@a.com"
+        release_notes:"adding list of specialization and doctors in home screen"
       )
   end
 end
